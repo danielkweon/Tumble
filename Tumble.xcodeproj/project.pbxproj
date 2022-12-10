@@ -101,11 +101,13 @@
 			children = (
 				A69C6B1B29452CA3008F87E1 /* AppDelegate.swift */,
 				A69C6B1D29452CA3008F87E1 /* SceneDelegate.swift */,
-				A69C6B1F29452CA3008F87E1 /* ViewController.swift */,
-				A69C6B2129452CA3008F87E1 /* Main.storyboard */,
 				A69C6B2429452CA5008F87E1 /* Assets.xcassets */,
-				A69C6B2629452CA5008F87E1 /* LaunchScreen.storyboard */,
 				A69C6B2929452CA5008F87E1 /* Info.plist */,
+				A69C6B2129452CA3008F87E1 /* Main.storyboard */,
+				A69C6B2629452CA5008F87E1 /* LaunchScreen.storyboard */,
+				A69C6B5429453237008F87E1 /* User Interface */,
+				A69C6B522945321E008F87E1 /* Gameplay */,
+				A69C6B5329453228008F87E1 /* Services */,
 			);
 			path = Tumble;
 			sourceTree = "<group>";
@@ -125,6 +127,36 @@
 				A69C6B3E29452CA5008F87E1 /* TumbleUITestsLaunchTests.swift */,
 			);
 			path = TumbleUITests;
+			sourceTree = "<group>";
+		};
+		A69C6B522945321E008F87E1 /* Gameplay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Gameplay;
+			sourceTree = "<group>";
+		};
+		A69C6B5329453228008F87E1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A69C6B5429453237008F87E1 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				A69C6B1F29452CA3008F87E1 /* ViewController.swift */,
+				A69C6B5529453256008F87E1 /* Components */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		A69C6B5529453256008F87E1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
