@@ -286,7 +286,7 @@
                                                 </state>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="l9X-lv-JPQ" userLabel="Gameplay Button Stack View">
-                                                <rect key="frame" x="71.333333333333329" y="41.333333333333371" width="232.33333333333337" height="47"/>
+                                                <rect key="frame" x="71.333333333333329" y="41.333333333333371" width="232.33333333333343" height="47"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXG-yN-Y7g" userLabel="Undo Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="93.666666666666671" height="47"/>
@@ -453,6 +453,22 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="button_clear" destination="ZrT-UG-dKP" id="QwI-GI-gmB"/>
+                        <outlet property="button_grid" destination="AKU-2j-unP" id="39A-pi-kjW"/>
+                        <outlet property="button_palette" destination="bu5-xo-897" id="QgT-wO-iKt"/>
+                        <outlet property="button_rotateCCW" destination="ure-JG-2k6" id="EeY-e8-6DR"/>
+                        <outlet property="button_rotateCW" destination="ryS-Ip-8yK" id="E5T-t0-NhH"/>
+                        <outlet property="button_setting" destination="nkt-gf-rHc" id="uEW-dx-r5t"/>
+                        <outlet property="button_undo" destination="AXG-yN-Y7g" id="2hT-4G-EbU"/>
+                        <outlet property="label_bestScore" destination="Znq-wC-77W" id="9Zf-IJ-QAq"/>
+                        <outlet property="label_bestScoreValue" destination="1f5-dP-6Fy" id="vkf-ml-Z6u"/>
+                        <outlet property="label_score" destination="LaX-cl-qQn" id="WpD-f4-G4u"/>
+                        <outlet property="label_scoreValue" destination="TDt-ef-K3d" id="cvY-gh-mNM"/>
+                        <outlet property="label_tumble" destination="w2o-rn-gaH" id="ZHP-eL-0zi"/>
+                        <outlet property="view_board" destination="v95-UU-sf3" id="a5p-7G-peE"/>
+                        <outlet property="view_gesture" destination="p66-Wn-cYZ" id="rBH-Mf-7VD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

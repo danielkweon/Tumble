@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A665346A2946FFB4005AF40A /* VCGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66534692946FFB4005AF40A /* VCGestures.swift */; };
+		A665346C29470072005AF40A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665346B29470072005AF40A /* Util.swift */; };
+		A665346E2947A579005AF40A /* VCGameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665346D2947A579005AF40A /* VCGameplay.swift */; };
+		A66534702947A5F8005AF40A /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665346F2947A5F8005AF40A /* Defaults.swift */; };
+		A66534722947A6E0005AF40A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66534712947A6E0005AF40A /* Color.swift */; };
+		A66534742947A85A005AF40A /* VCButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66534732947A85A005AF40A /* VCButtons.swift */; };
+		A66534762947ABCD005AF40A /* VCVisuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66534752947ABCD005AF40A /* VCVisuals.swift */; };
 		A69C6B1C29452CA3008F87E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C6B1B29452CA3008F87E1 /* AppDelegate.swift */; };
 		A69C6B1E29452CA3008F87E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C6B1D29452CA3008F87E1 /* SceneDelegate.swift */; };
 		A69C6B2029452CA3008F87E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69C6B1F29452CA3008F87E1 /* ViewController.swift */; };
@@ -36,6 +43,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A66534692946FFB4005AF40A /* VCGestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCGestures.swift; sourceTree = "<group>"; };
+		A665346B29470072005AF40A /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		A665346D2947A579005AF40A /* VCGameplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCGameplay.swift; sourceTree = "<group>"; };
+		A665346F2947A5F8005AF40A /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		A66534712947A6E0005AF40A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A66534732947A85A005AF40A /* VCButtons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCButtons.swift; sourceTree = "<group>"; };
+		A66534752947ABCD005AF40A /* VCVisuals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCVisuals.swift; sourceTree = "<group>"; };
 		A69C6B1829452CA3008F87E1 /* Tumble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A69C6B1B29452CA3008F87E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A69C6B1D29452CA3008F87E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A66534682946FF9B005AF40A /* VCExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				A66534732947A85A005AF40A /* VCButtons.swift */,
+				A665346D2947A579005AF40A /* VCGameplay.swift */,
+				A66534692946FFB4005AF40A /* VCGestures.swift */,
+				A66534752947ABCD005AF40A /* VCVisuals.swift */,
+			);
+			path = VCExtensions;
+			sourceTree = "<group>";
+		};
 		A69C6B0F29452CA3008F87E1 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +164,9 @@
 		A69C6B5329453228008F87E1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A66534712947A6E0005AF40A /* Color.swift */,
+				A665346F2947A5F8005AF40A /* Defaults.swift */,
+				A665346B29470072005AF40A /* Util.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -147,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				A69C6B1F29452CA3008F87E1 /* ViewController.swift */,
+				A66534682946FF9B005AF40A /* VCExtensions */,
 				A69C6B5529453256008F87E1 /* Components */,
 			);
 			path = "User Interface";
@@ -291,7 +320,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69C6B2029452CA3008F87E1 /* ViewController.swift in Sources */,
+				A66534742947A85A005AF40A /* VCButtons.swift in Sources */,
+				A66534702947A5F8005AF40A /* Defaults.swift in Sources */,
 				A69C6B1C29452CA3008F87E1 /* AppDelegate.swift in Sources */,
+				A66534762947ABCD005AF40A /* VCVisuals.swift in Sources */,
+				A665346E2947A579005AF40A /* VCGameplay.swift in Sources */,
+				A665346C29470072005AF40A /* Util.swift in Sources */,
+				A66534722947A6E0005AF40A /* Color.swift in Sources */,
+				A665346A2946FFB4005AF40A /* VCGestures.swift in Sources */,
 				A69C6B1E29452CA3008F87E1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
