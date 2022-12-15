@@ -11,21 +11,30 @@ class Defaults {
     
     //MARK: - Default Values
     
-    static let default_board                    = "4x4"
     static let default_currentScore             = 0
-    static let default_bestScores               = ["4x4"    : 0,
-                                                   "4x4_1"  : 0,
-                                                   "5x5"    : 0,
-                                                   "5x5_1"  : 0,
-                                                   "5x5_2"  : 0]
+    static let default_bestScores               = ["grid0"  : 0,
+                                                   "grid1"  : 0,
+                                                   "grid2"  : 0,
+                                                   "grid3"  : 0,
+                                                   "grid4"  : 0,
+                                                   "grid5"  : 0,
+                                                   "grid6"  : 0,
+                                                   "grid7"  : 0]
+
+    static let default_grid                     = "grid0"
+    static let default_unlockedGrids            = ["grid0"]
+    static let default_unlockedColors           = ["blue"]
 
     
     //MARK: - User Defaults Keys
     
-    static let key_darkAppearance               = "default_dark_appearance"
     static let key_unlockedColors               = "default_unlocked_colors"
+    static let key_unlockedGrids                = "default_unlocked_grids"
+    
+    static let key_darkAppearance               = "default_dark_appearance"
     static let key_color                        = "default_color"
         
+    static let key_grid                         = "default_grid"
     static let key_board                        = "default_board"
     static let key_score                        = "default_score"
     static let key_bestScores                   = "default_best_score"
@@ -39,8 +48,6 @@ class Defaults {
         if UserDefaults.standard.object(forKey: key) == nil {
             print("\(key) not found")
             switch key {
-            case key_board:
-                set(key: key, value: default_board)
             case key_color:
                 set(key: key, value: ColorDefaults.blue.rawValue)
             case key_rotationSource:
@@ -49,6 +56,10 @@ class Defaults {
                 set(key: key, value: default_currentScore)
             case key_bestScores:
                 set(key: key, value: default_bestScores)
+            case key_unlockedGrids:
+                set(key: key, value: default_unlockedGrids)
+            case key_grid:
+                set(key: key, value: default_grid)
             default:
                 break
             }
