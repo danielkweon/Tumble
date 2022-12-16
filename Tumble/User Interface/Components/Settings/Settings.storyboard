@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V6E-n5-QWR">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="xEC-Qn-dz6">
+            <objects>
+                <viewController id="V6E-n5-QWR" customClass="SettingsViewController" customModule="Tumble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LCl-T9-RqS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVQ-lI-qtU" userLabel="Settings View">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T5a-D4-KwI" userLabel="Settings Label View">
+                                        <rect key="frame" x="0.0" y="0.0" width="196.66666666666666" height="131"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" lineBreakMode="tailTruncation" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="lZb-KM-iE9" userLabel="Settings Label">
+                                                <rect key="frame" x="12" y="55" width="172.66666666666666" height="54"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                                <color key="textColor" red="0.58837340360000001" green="0.78613914090000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=compact">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                                </variation>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="58"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="lZb-KM-iE9" firstAttribute="trailing" secondItem="T5a-D4-KwI" secondAttribute="trailing" constant="-12" id="779-IY-boj"/>
+                                            <constraint firstItem="lZb-KM-iE9" firstAttribute="leading" secondItem="T5a-D4-KwI" secondAttribute="leading" constant="12" id="hWF-Z1-FRQ"/>
+                                            <constraint firstItem="lZb-KM-iE9" firstAttribute="centerY" secondItem="T5a-D4-KwI" secondAttribute="centerY" multiplier="1.25" id="kCM-l6-bWC"/>
+                                            <constraint firstAttribute="width" secondItem="T5a-D4-KwI" secondAttribute="height" multiplier="3:2" id="soO-gA-7xo"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56o-Eq-PR4" userLabel="Settings Table View">
+                                        <rect key="frame" x="0.0" y="131" width="393" height="662"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yeo-ut-rfW" userLabel="Settings Table">
+                                                <rect key="frame" x="0.0" y="0.0" width="393" height="662"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="yeo-ut-rfW" firstAttribute="trailing" secondItem="56o-Eq-PR4" secondAttribute="trailing" id="3j8-Lw-sEP"/>
+                                            <constraint firstItem="yeo-ut-rfW" firstAttribute="top" secondItem="56o-Eq-PR4" secondAttribute="top" id="4Pc-cP-3n7"/>
+                                            <constraint firstItem="yeo-ut-rfW" firstAttribute="bottom" secondItem="56o-Eq-PR4" secondAttribute="bottom" id="Beq-JY-R1O"/>
+                                            <constraint firstItem="yeo-ut-rfW" firstAttribute="leading" secondItem="56o-Eq-PR4" secondAttribute="leading" id="sBq-eN-v3l"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="56o-Eq-PR4" firstAttribute="bottom" secondItem="EVQ-lI-qtU" secondAttribute="bottom" id="7xl-8v-Maj"/>
+                                    <constraint firstItem="T5a-D4-KwI" firstAttribute="top" secondItem="EVQ-lI-qtU" secondAttribute="top" id="ABa-FC-5Ig"/>
+                                    <constraint firstAttribute="width" secondItem="EVQ-lI-qtU" secondAttribute="height" multiplier="1:2" id="LqK-0U-uaL"/>
+                                    <constraint firstItem="T5a-D4-KwI" firstAttribute="leading" secondItem="EVQ-lI-qtU" secondAttribute="leading" id="M7R-bA-sf1"/>
+                                    <constraint firstItem="56o-Eq-PR4" firstAttribute="leading" secondItem="EVQ-lI-qtU" secondAttribute="leading" id="O4C-lL-Epu"/>
+                                    <constraint firstItem="56o-Eq-PR4" firstAttribute="trailing" secondItem="EVQ-lI-qtU" secondAttribute="trailing" id="YaT-oA-qZw"/>
+                                    <constraint firstItem="T5a-D4-KwI" firstAttribute="trailing" secondItem="EVQ-lI-qtU" secondAttribute="centerX" id="Ys0-Ig-ICF"/>
+                                    <constraint firstItem="56o-Eq-PR4" firstAttribute="top" secondItem="T5a-D4-KwI" secondAttribute="bottom" id="dkg-hF-cgi"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="LqK-0U-uaL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="LqK-0U-uaL"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="egF-1T-J07"/>
+                        <color key="backgroundColor" red="0.94901961089999998" green="0.94901961089999998" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="EVQ-lI-qtU" firstAttribute="leading" secondItem="egF-1T-J07" secondAttribute="leading" id="HGC-Fa-4uh"/>
+                            <constraint firstItem="EVQ-lI-qtU" firstAttribute="centerX" secondItem="LCl-T9-RqS" secondAttribute="centerX" id="RWv-Zj-jwp"/>
+                            <constraint firstItem="EVQ-lI-qtU" firstAttribute="top" secondItem="egF-1T-J07" secondAttribute="top" id="Yao-Mb-B7X"/>
+                            <constraint firstItem="EVQ-lI-qtU" firstAttribute="bottom" secondItem="LCl-T9-RqS" secondAttribute="bottom" id="Znw-aX-uc2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HGC-Fa-4uh"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="HGC-Fa-4uh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="table_settings" destination="yeo-ut-rfW" id="Poj-P4-R4u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFS-nr-23c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="89"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

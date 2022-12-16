@@ -1,13 +1,13 @@
 //
-//  GridsTableViewCell.swift
+//  ColorsTableViewCell.swift
 //  Tumble
 //
-//  Created by Daniel Kweon on 12/14/22.
+//  Created by Daniel Kweon on 12/15/22.
 //
 
 import UIKit
 
-class GridsTableViewCell: UITableViewCell {
+class ColorsTableViewCell: UITableViewCell {
 
     //MARK: - User Interface Components
     
@@ -20,10 +20,11 @@ class GridsTableViewCell: UITableViewCell {
     
     //MARK: - Variable
     
-    var delegate: GridsViewController?
+    var delegate: ColorsViewController?
 
     var tiles               : [[Tile]] = []
-    var grid: GridDefaults? {
+    var tileValues          : [Int] = [2, 4, 8, 16]
+    var color: ColorDefaults? {
         didSet {
             view_board.layer.cornerRadius = view_board.frame.width / 30.0
             addTilesToBoard()
@@ -58,16 +59,12 @@ class GridsTableViewCell: UITableViewCell {
     
     func addTilesToBoard() {
         view_board.layoutIfNeeded()
-
-        let size = grid!.grid.size, layout = grid!.grid.layout
-        let tileSpacing = view_board.frame.width / 42.0
+        
+        var tileIndex = 0
+        let size = 2, tileSpacing = view_board.frame.width / 42.0
         for row in 0 ..< size {
             var tileRow: [Tile] = []
             for col in 0 ..< size {
-                if layout[row][col] == -1 {
-                    continue
-                }
-                
                 let tileSize = (view_board.frame.width
                                 - ((CGFloat(size) + 1.0) * tileSpacing)) / CGFloat(size)
                 let origin = CGPoint(x: tileSpacing + CGFloat(col)
@@ -76,19 +73,23 @@ class GridsTableViewCell: UITableViewCell {
                                         * (tileSize + tileSpacing))
                 let tile = Tile(frame: CGRect(origin: origin,
                                               size: CGSize(width: tileSize, height: tileSize)))
+                let (_, backgroundColor) = Colors.colorFor(value: tileValues[tileIndex],
+                                                            colorDefault: color!)
+                tile.backgroundColor = backgroundColor
                 view_board.addSubview(tile)
                 tileRow.append(tile)
+                tileIndex += 1
             }
             tiles.append(tileRow)
         }
     }
     
     func setButtonText() {
-        if Defaults.get(key: Defaults.key_grid) as! String == grid!.description {
+        if Defaults.get(key: Defaults.key_color) as! ColorDefaults == color! {
             button_unlock.isHidden   = true
             button_select.isHidden   = true
             button_selected.isHidden = false
-        } else if (Defaults.get(key: Defaults.key_unlockedGrids) as! [String]).contains(grid!.description) {
+        } else if (Defaults.get(key: Defaults.key_unlockedColors) as! [String]).contains(color!.description) {
             button_unlock.isHidden   = true
             button_select.isHidden   = false
             button_selected.isHidden = true
@@ -99,18 +100,19 @@ class GridsTableViewCell: UITableViewCell {
     //MARK: - Button Actions
     
     @IBAction func unlockButtonPressed(_ sender: Any) {
-        var unlockedGrids = Defaults.get(key: Defaults.key_unlockedGrids) as! [String]
-        unlockedGrids.append(grid!.description)
-        Defaults.set(key: Defaults.key_unlockedGrids, value: unlockedGrids)
+        var unlockedColors = Defaults.get(key: Defaults.key_unlockedColors) as! [String]
+        unlockedColors.append(color!.description)
+        Defaults.set(key: Defaults.key_unlockedColors, value: unlockedColors)
         
-        self.delegate?.table_grids.reloadData()
+        self.delegate?.table_colors.reloadData()
         //TODO
     }
     
     @IBAction func selectButtonPressed(_ sender: Any) {
-        Defaults.set(key: Defaults.key_grid, value: grid!.description)
+        Defaults.set(key: Defaults.key_color, value: color!.rawValue)
 
-        self.delegate?.table_grids.reloadData()
+        self.delegate?.table_colors.reloadData()
     }
     
 }
+

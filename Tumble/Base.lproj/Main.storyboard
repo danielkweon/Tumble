@@ -62,6 +62,9 @@
                                                             <imageReference key="image" image="paintpalette" catalog="system" symbolScale="medium"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" weight="medium"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="UVe-kl-iEY" kind="show" id="YnR-CV-TjS"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,6 +87,9 @@
                                                             <imageReference key="image" image="gearshape" catalog="system" symbolScale="medium"/>
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" weight="medium"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="nOg-Ah-CzN" kind="show" id="enW-y7-mbN"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -496,6 +502,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HwP-vg-IxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1751" y="-342"/>
+        </scene>
+        <!--Colors-->
+        <scene sceneID="l1g-GG-FMw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Colors" id="UVe-kl-iEY" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Nqb-1c-NN2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tmZ-rv-gMR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1755" y="-295"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="tem-o5-NIT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="nOg-Ah-CzN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MRp-Q2-KhV"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xhu-gY-rfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="-249"/>
         </scene>
     </scenes>
     <resources>

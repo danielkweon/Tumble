@@ -23,13 +23,14 @@ class Defaults {
 
     static let default_grid                     = "grid0"
     static let default_unlockedGrids            = ["grid0"]
-    static let default_unlockedColors           = ["blue"]
+    static let default_unlockedColors           = ["Blue"]
+    
+    static let default_board                    = [[Int]](repeating: [Int](
+                                                            repeating: 0, count: 4),
+                                                            count: 4)
 
     
     //MARK: - User Defaults Keys
-    
-    static let key_unlockedColors               = "default_unlocked_colors"
-    static let key_unlockedGrids                = "default_unlocked_grids"
     
     static let key_darkAppearance               = "default_dark_appearance"
     static let key_color                        = "default_color"
@@ -40,6 +41,9 @@ class Defaults {
     static let key_bestScores                   = "default_best_score"
     static let key_bestBoards                   = "default_best_boards"
     static let key_rotationSource               = "default_rotation_source"
+    
+    static let key_unlockedColors               = "default_unlocked_colors"
+    static let key_unlockedGrids                = "default_unlocked_grids"
 
     
     //MARK: - Get and Set
@@ -48,6 +52,10 @@ class Defaults {
         if UserDefaults.standard.object(forKey: key) == nil {
             print("\(key) not found")
             switch key {
+            case key_board:
+                set(key: key, value: default_board)
+            case key_unlockedColors:
+                set(key: key, value: default_unlockedColors)
             case key_color:
                 set(key: key, value: ColorDefaults.blue.rawValue)
             case key_rotationSource:

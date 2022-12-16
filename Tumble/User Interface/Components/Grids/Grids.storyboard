@@ -45,10 +45,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UDP-4v-88T" userLabel="Points Label View">
-                                        <rect key="frame" x="207" y="0.0" width="207" height="138"/>
+                                        <rect key="frame" x="207" y="0.0" width="207" height="144"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234567 Points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="SeB-hU-8fn" userLabel="Points Label">
-                                                <rect key="frame" x="12" y="80.5" width="183" height="29"/>
+                                                <rect key="frame" x="12" y="84.5" width="183" height="29"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" red="0.72156864399999998" green="0.89019608500000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
@@ -68,10 +68,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qJ-QT-dxB" userLabel="Grids Table View">
-                                        <rect key="frame" x="0.0" y="138" width="414" height="710"/>
+                                        <rect key="frame" x="0.0" y="144" width="414" height="704"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TRz-5T-CXO" userLabel="Grids Table">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="710"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="704"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </tableView>
                                         </subviews>
@@ -89,8 +89,8 @@
                                     <constraint firstAttribute="width" secondItem="Mcy-sc-Som" secondAttribute="height" multiplier="1:2" id="3Um-Uf-L8B"/>
                                     <constraint firstItem="UDP-4v-88T" firstAttribute="trailing" secondItem="Mcy-sc-Som" secondAttribute="trailing" id="5r4-ZJ-Dnq"/>
                                     <constraint firstItem="g5O-M3-lVQ" firstAttribute="trailing" secondItem="Mcy-sc-Som" secondAttribute="centerX" id="CPk-HA-lWC"/>
-                                    <constraint firstItem="2qJ-QT-dxB" firstAttribute="top" secondItem="g5O-M3-lVQ" secondAttribute="bottom" id="DFN-Kg-RIE"/>
-                                    <constraint firstItem="2qJ-QT-dxB" firstAttribute="top" secondItem="UDP-4v-88T" secondAttribute="bottom" id="Dyg-oo-ecg"/>
+                                    <constraint firstItem="2qJ-QT-dxB" firstAttribute="top" secondItem="g5O-M3-lVQ" secondAttribute="bottom" constant="6" id="DFN-Kg-RIE"/>
+                                    <constraint firstItem="UDP-4v-88T" firstAttribute="bottom" secondItem="2qJ-QT-dxB" secondAttribute="top" id="Dyg-oo-ecg"/>
                                     <constraint firstItem="2qJ-QT-dxB" firstAttribute="trailing" secondItem="Mcy-sc-Som" secondAttribute="trailing" id="ITD-9G-0AW"/>
                                     <constraint firstItem="g5O-M3-lVQ" firstAttribute="top" secondItem="Mcy-sc-Som" secondAttribute="top" id="LZr-ve-d9I"/>
                                     <constraint firstItem="2qJ-QT-dxB" firstAttribute="leading" secondItem="Mcy-sc-Som" secondAttribute="leading" id="POV-4j-qUl"/>

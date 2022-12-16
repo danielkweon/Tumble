@@ -19,12 +19,12 @@ enum ColorDefaults: Int,
 {
     case blue
     case red
-//    case green
-//    case orange
+    case green
+    case yellow
+    case pink
+    case purple
 //    case gray
 //    case brown
-//    case pink
-//    case purple
 //
 //    case floral
 //    case pastel
@@ -42,6 +42,14 @@ enum ColorDefaults: Int,
             return "Blue"
         case .red:
             return "Red"
+        case .green:
+            return "Green"
+        case .yellow:
+            return "Yellow"
+        case .pink:
+            return "Pink"
+        case .purple:
+            return "Purple"
         }
     }
 }
@@ -63,6 +71,18 @@ class Colors {
         case .red:
             (bRGB, lRGB) = index < redColors.count ?
                 redColors[index] : (RGB(R: 255, G: 0, B: 0), whiteRGB)
+        case .green:
+            (bRGB, lRGB) = index < blueColors.count ?
+                greenColors[index] : (RGB(R: 0, G: 255, B: 0), whiteRGB)
+        case .yellow:
+            (bRGB, lRGB) = index < redColors.count ?
+                yellowColors[index] : (RGB(R: 255, G: 255, B: 0), whiteRGB)
+        case .pink:
+            (bRGB, lRGB) = index < blueColors.count ?
+                pinkColors[index] : (RGB(R: 255, G: 192, B: 203), whiteRGB)
+        case .purple:
+            (bRGB, lRGB) = index < redColors.count ?
+                purpleColors[index] : (RGB(R: 147, G: 112, B: 219), whiteRGB)
         }
         let backColor = UIColor(displayP3Red:   CGFloat(bRGB.R)/255,
                                 green:          CGFloat(bRGB.G)/255,
@@ -113,6 +133,42 @@ class Colors {
         
         (RGB(R: 95,  G: 25,  B: 20),        RGB(R: 255, G: 255, B: 255)),
         (RGB(R: 80,  G: 0,   B: 0),         RGB(R: 255, G: 255, B: 255)),
+        ]
+
+    static let greenColors: [(RGB, RGB)] = [
+        (RGB(R: 208, G: 240, B: 192),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 152, G: 251, B: 152),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 80,  G: 220, B: 100),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 76,  G: 187,  B: 23),       RGB(R: 255, G: 255, B: 255)),
+        
+        (RGB(R: 57,  G: 255, B: 20),        RGB(R: 255, G: 255, B: 255)),
+        ]
+
+    static let yellowColors: [(RGB, RGB)] = [
+        (RGB(R: 252, G: 244, B: 163),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 255, G: 211, B: 0),         RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 255, G: 195, B: 11),        RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 218, G: 165, B: 32),        RGB(R: 255, G: 255, B: 255)),
+        
+        (RGB(R: 249, G: 166,  B: 2),        RGB(R: 255, G: 255, B: 255)),
+        ]
+
+    static let pinkColors: [(RGB, RGB)] = [
+        (RGB(R: 255, G: 105, B: 180),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 251, G: 174, B: 210),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 254, G: 127, B: 156),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 255, G: 102, B: 204),       RGB(R: 255, G: 255, B: 255)),
+        
+        (RGB(R: 254, G: 127, B: 156),       RGB(R: 255, G: 255, B: 255)),
+        ]
+
+    static let purpleColors: [(RGB, RGB)] = [
+        (RGB(R: 230, G: 230, B: 250),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 216, G: 191, B: 216),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 221, G: 160, B: 221),       RGB(R: 255, G: 255, B: 255)),
+        (RGB(R: 238, G: 130, B: 238),       RGB(R: 255, G: 255, B: 255)),
+        
+        (RGB(R: 186, G: 85,  B: 211),       RGB(R: 255, G: 255, B: 255)),
         ]
 
 }

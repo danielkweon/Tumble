@@ -29,6 +29,18 @@
 		A6EFA2AE2947EA46003CC7CA /* GridsTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2AB2947EA46003CC7CA /* GridsTableExtension.swift */; };
 		A6EFA2B5294A4883003CC7CA /* GridsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2B3294A4883003CC7CA /* GridsTableViewCell.swift */; };
 		A6EFA2B6294A4883003CC7CA /* GridsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2B4294A4883003CC7CA /* GridsTableViewCell.xib */; };
+		A6EFA2BB294BA450003CC7CA /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2BA294BA450003CC7CA /* ColorsViewController.swift */; };
+		A6EFA2BD294BA478003CC7CA /* ColorsTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2BC294BA478003CC7CA /* ColorsTableExtension.swift */; };
+		A6EFA2C0294BA4C2003CC7CA /* ColorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2BE294BA4C2003CC7CA /* ColorsTableViewCell.swift */; };
+		A6EFA2C1294BA4C2003CC7CA /* ColorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2BF294BA4C2003CC7CA /* ColorsTableViewCell.xib */; };
+		A6EFA2C3294BA4FB003CC7CA /* Colors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2C2294BA4FB003CC7CA /* Colors.storyboard */; };
+		A6EFA2C6294BA65F003CC7CA /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2C5294BA65F003CC7CA /* Tile.swift */; };
+		A6EFA2C8294BC732003CC7CA /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2C7294BC732003CC7CA /* SettingsEnums.swift */; };
+		A6EFA2CA294BC852003CC7CA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2C9294BC852003CC7CA /* Settings.storyboard */; };
+		A6EFA2CC294BC87C003CC7CA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2CB294BC87C003CC7CA /* SettingsViewController.swift */; };
+		A6EFA2CE294BC881003CC7CA /* SettingsTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2CD294BC881003CC7CA /* SettingsTableExtension.swift */; };
+		A6EFA2D0294BC887003CC7CA /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2CF294BC887003CC7CA /* SettingsCell.swift */; };
+		A6EFA2D2294C10DD003CC7CA /* BoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2D1294C10DD003CC7CA /* BoardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +87,18 @@
 		A6EFA2AB2947EA46003CC7CA /* GridsTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridsTableExtension.swift; sourceTree = "<group>"; };
 		A6EFA2B3294A4883003CC7CA /* GridsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridsTableViewCell.swift; sourceTree = "<group>"; };
 		A6EFA2B4294A4883003CC7CA /* GridsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridsTableViewCell.xib; sourceTree = "<group>"; };
+		A6EFA2BA294BA450003CC7CA /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		A6EFA2BC294BA478003CC7CA /* ColorsTableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableExtension.swift; sourceTree = "<group>"; };
+		A6EFA2BE294BA4C2003CC7CA /* ColorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewCell.swift; sourceTree = "<group>"; };
+		A6EFA2BF294BA4C2003CC7CA /* ColorsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsTableViewCell.xib; sourceTree = "<group>"; };
+		A6EFA2C2294BA4FB003CC7CA /* Colors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Colors.storyboard; sourceTree = "<group>"; };
+		A6EFA2C5294BA65F003CC7CA /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		A6EFA2C7294BC732003CC7CA /* SettingsEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsEnums.swift; sourceTree = "<group>"; };
+		A6EFA2C9294BC852003CC7CA /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		A6EFA2CB294BC87C003CC7CA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A6EFA2CD294BC881003CC7CA /* SettingsTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableExtension.swift; sourceTree = "<group>"; };
+		A6EFA2CF294BC887003CC7CA /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		A6EFA2D1294C10DD003CC7CA /* BoardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +140,11 @@
 		A66534792947D857005AF40A /* Colors */ = {
 			isa = PBXGroup;
 			children = (
+				A6EFA2C2294BA4FB003CC7CA /* Colors.storyboard */,
+				A6EFA2BA294BA450003CC7CA /* ColorsViewController.swift */,
+				A6EFA2BC294BA478003CC7CA /* ColorsTableExtension.swift */,
+				A6EFA2BF294BA4C2003CC7CA /* ColorsTableViewCell.xib */,
+				A6EFA2BE294BA4C2003CC7CA /* ColorsTableViewCell.swift */,
 			);
 			path = Colors;
 			sourceTree = "<group>";
@@ -123,6 +152,11 @@
 		A66534882947D85C005AF40A /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				A6EFA2C7294BC732003CC7CA /* SettingsEnums.swift */,
+				A6EFA2C9294BC852003CC7CA /* Settings.storyboard */,
+				A6EFA2CB294BC87C003CC7CA /* SettingsViewController.swift */,
+				A6EFA2CD294BC881003CC7CA /* SettingsTableExtension.swift */,
+				A6EFA2CF294BC887003CC7CA /* SettingsCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -195,6 +229,7 @@
 		A69C6B522945321E008F87E1 /* Gameplay */ = {
 			isa = PBXGroup;
 			children = (
+				A6EFA2D1294C10DD003CC7CA /* BoardModel.swift */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -223,11 +258,20 @@
 		A69C6B5529453256008F87E1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A6EFA2C4294BA616003CC7CA /* Accessories */,
 				A66534892947D861005AF40A /* Grids */,
 				A66534792947D857005AF40A /* Colors */,
 				A66534882947D85C005AF40A /* Settings */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		A6EFA2C4294BA616003CC7CA /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				A6EFA2C5294BA65F003CC7CA /* Tile.swift */,
+			);
+			path = Accessories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +379,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A69C6B2829452CA5008F87E1 /* LaunchScreen.storyboard in Resources */,
+				A6EFA2C1294BA4C2003CC7CA /* ColorsTableViewCell.xib in Resources */,
+				A6EFA2C3294BA4FB003CC7CA /* Colors.storyboard in Resources */,
+				A6EFA2CA294BC852003CC7CA /* Settings.storyboard in Resources */,
 				A69C6B2529452CA5008F87E1 /* Assets.xcassets in Resources */,
 				A6EFA2B6294A4883003CC7CA /* GridsTableViewCell.xib in Resources */,
 				A665348D2947D884005AF40A /* Grids.storyboard in Resources */,
@@ -366,15 +413,24 @@
 				A69C6B2029452CA3008F87E1 /* ViewController.swift in Sources */,
 				A66534742947A85A005AF40A /* VCButtons.swift in Sources */,
 				A6EFA2AE2947EA46003CC7CA /* GridsTableExtension.swift in Sources */,
+				A6EFA2CC294BC87C003CC7CA /* SettingsViewController.swift in Sources */,
 				A66534702947A5F8005AF40A /* Defaults.swift in Sources */,
 				A69C6B1C29452CA3008F87E1 /* AppDelegate.swift in Sources */,
+				A6EFA2CE294BC881003CC7CA /* SettingsTableExtension.swift in Sources */,
 				A66534762947ABCD005AF40A /* VCVisuals.swift in Sources */,
 				A665346E2947A579005AF40A /* VCGameplay.swift in Sources */,
+				A6EFA2C0294BA4C2003CC7CA /* ColorsTableViewCell.swift in Sources */,
+				A6EFA2D0294BC887003CC7CA /* SettingsCell.swift in Sources */,
 				A665346C29470072005AF40A /* Util.swift in Sources */,
+				A6EFA2C8294BC732003CC7CA /* SettingsEnums.swift in Sources */,
 				A6EA62F42947DADE007CA1CB /* Grids.swift in Sources */,
+				A6EFA2D2294C10DD003CC7CA /* BoardModel.swift in Sources */,
 				A66534722947A6E0005AF40A /* Colors.swift in Sources */,
+				A6EFA2BB294BA450003CC7CA /* ColorsViewController.swift in Sources */,
 				A665346A2946FFB4005AF40A /* VCGestures.swift in Sources */,
+				A6EFA2BD294BA478003CC7CA /* ColorsTableExtension.swift in Sources */,
 				A69C6B1E29452CA3008F87E1 /* SceneDelegate.swift in Sources */,
+				A6EFA2C6294BA65F003CC7CA /* Tile.swift in Sources */,
 				A6EFA2AD2947EA46003CC7CA /* GridsViewController.swift in Sources */,
 				A6EFA2B5294A4883003CC7CA /* GridsTableViewCell.swift in Sources */,
 			);
