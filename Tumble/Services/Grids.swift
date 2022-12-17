@@ -8,14 +8,13 @@
 import Foundation
 
 struct Grid {
-    let size    : Int
-    let layout  : [[Int]]
+    let size: Int
+    let layout: [[Int]]
 }
 
 enum GridDefaults: Int,
                     CaseIterable,
-                    CustomStringConvertible
-{
+                    CustomStringConvertible {
     case grid0
     case grid1
     case grid2
@@ -23,7 +22,6 @@ enum GridDefaults: Int,
     case grid4
     case grid5
     case grid6
-    case grid7
 
     var description: String {
         switch self {
@@ -41,11 +39,9 @@ enum GridDefaults: Int,
             return "grid5"
         case .grid6:
             return "grid6"
-        case .grid7:
-            return "grid7"
         }
     }
-    
+
     var details: String {
         switch self {
         case .grid0:
@@ -57,75 +53,66 @@ enum GridDefaults: Int,
         case .grid3:
             return "5x5 Full"
         case .grid4:
-            return "5x5 without 2 Corners"
-        case .grid5:
             return "5x5 without 4 Center"
-        case .grid6:
+        case .grid5:
             return "5x5 without Center"
-        case .grid7:
+        case .grid6:
             return "5x5 without 2 Corners 2"
         }
     }
-    
+
     var grid: Grid {
         switch self {
         case .grid0:
-            return Grid(size    : 4,
-                        layout  : [[ 0,  0,  0,  0],
-                                   [ 0,  0,  0,  0],
-                                   [ 0,  0,  0,  0],
-                                   [ 0,  0,  0,  0]])
+            return Grid(size: 4,
+                        layout: [[0, 0, 0, 0],
+                                 [0, 0, 0, 0],
+                                 [0, 0, 0, 0],
+                                 [0, 0, 0, 0]])
         case .grid1:
-            return Grid(size    : 4,
-                        layout  : [[ 0,  0,  0, -1],
-                                   [ 0,  0,  0,  0],
-                                   [ 0,  0,  0,  0],
-                                   [-1,  0,  0,  0]])
+            return Grid(size: 4,
+                        layout: [[0, 0, 0, -1],
+                                 [0, 0, 0, 0],
+                                 [0, 0, 0, 0],
+                                 [-1, 0, 0, 0]])
         case .grid2:
-            return Grid(size    : 4,
-                        layout  : [[ 0,  0,  0,  0],
-                                   [ 0,  0, -1,  0],
-                                   [ 0, -1,  0,  0],
-                                   [ 0,  0,  0,  0]])
+            return Grid(size: 4,
+                        layout: [[-1, 0, 0, -1],
+                                 [0, 0, 0, 0],
+                                 [0, 0, 0, 0],
+                                 [-1, 0, 0, -1]])
         case .grid3:
-            return Grid(size    : 5,
-                        layout  : [[ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0]])
+            return Grid(size: 5,
+                        layout: [[0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0],
+                                 [0, 0, 0, 0, 0]])
 
         case .grid4:
-            return Grid(size    : 5,
-                        layout  : [[ 0,  0,  0,  0, -1],
-                                   [ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0],
-                                   [-1,  0,  0,  0,  0]])
+            return Grid(size: 5,
+                        layout: [[-1, 0, 0, 0, -1],
+                                 [0, 0, 0, 0, 0],
+                                 [0, 0, -1, 0, 0],
+                                 [0, 0, 0, 0, 0],
+                                 [-1, 0, 0, 0, -1]])
 
         case .grid5:
-            return Grid(size    : 5,
-                        layout  : [[-1,  0,  0,  0, -1],
-                                   [ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0],
-                                   [-1,  0,  0,  0, -1]])
+            return Grid(size: 5,
+                        layout: [[0, 0, 0, 0, 0],
+                                 [0, 0, 0, -1, 0],
+                                 [0, 0, -1, 0, 0],
+                                 [0, -1, 0, 0, 0],
+                                 [0, 0, 0, 0, 0]])
 
         case .grid6:
-            return Grid(size    : 5,
-                        layout  : [[ 0,  0,  0,  0,  0],
-                                   [ 0,  0,  0, -1,  0],
-                                   [ 0,  0, -1,  0,  0],
-                                   [ 0, -1,  0,  0,  0],
-                                   [ 0,  0,  0,  0,  0]])
-            
-        case .grid7:
-            return Grid(size    : 5,
-                        layout  : [[ 0,  0,  0, -1, -1],
-                                   [ 0,  0,  0,  0, -1],
-                                   [ 0,  0,  0,  0,  0],
-                                   [-1,  0,  0,  0,  0],
-                                   [-1, -1,  0,  0,  0]])
+            return Grid(size: 5,
+                        layout: [[0, 0, 0, -1, -1],
+                                 [0, 0, 0, 0, -1],
+                                 [0, 0, 0, 0, 0],
+                                 [-1, 0, 0, 0, 0],
+                                 [-1, -1, 0, 0, 0]])
         }
     }
+
 }

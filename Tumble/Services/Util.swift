@@ -26,7 +26,7 @@ class Util {
         }
         return rotatedGrid
     }
-    
+
     static func rotateCCW(grid: [[Any?]]) -> [[Any?]] {
         var rotatedGrid: [[Any?]] = []
         let gridSize = grid.count - 1
@@ -39,7 +39,7 @@ class Util {
         }
         return rotatedGrid
     }
-        
+
     static func printBoard(grid: [[Int]]) {
         for row in 0 ..< grid.count {
             var rowPrint = ""

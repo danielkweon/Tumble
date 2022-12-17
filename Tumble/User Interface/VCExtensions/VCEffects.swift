@@ -9,17 +9,17 @@ import Foundation
 import UIKit
 
 extension ViewController {
-    
+
     func handleAnimations(drops: [Drops], CCWRotations: Int) {
         var delay = Constants.duration_rotation * 0.95
         animateBoardRotation(CCWRotations: CCWRotations)
 
-        if drops.count == 0 {
+        if drops.isEmpty {
             delay += Constants.delay_minimum
         } else {
             for i in 0 ..< drops.count {
                 Timer.scheduledTimer(withTimeInterval: delay,
-                                     repeats: false) { (timer) in
+                                     repeats: false) { _ in
                     self.dropTiles(drop: drops[i])
                 }
                 if drops.count > 1 {
@@ -29,11 +29,11 @@ extension ViewController {
                 }
             }
         }
-        Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { _ in
             self.gameService.postDrops()
         }
     }
-    
+
     func dropTiles(drop: Drops) {
         var scoreIncrease = 0
         for row in (0 ..< tiles.count).reversed() {
@@ -66,12 +66,12 @@ extension ViewController {
             updateLabel(currentScore: gameService.currentScore, bestScoreBeat: bestScoreBeat)
         }
     }
-    
+
     func animateBoardRotation(CCWRotations: Int) {
         let boardRadians = 90.0 / 180.0 * CGFloat.pi * CGFloat(CCWRotations)
         let labelCCWRotations = (4 - CCWRotations) % 4
         let labelRadians = 90.0 / 180.0 * CGFloat.pi * CGFloat(labelCCWRotations)
-        
+
         UIView.animate(withDuration: Constants.duration_rotation) {
             self.view_board.transform = CGAffineTransform(rotationAngle: boardRadians)
             for row in 0 ..< self.tiles.count {
@@ -82,7 +82,7 @@ extension ViewController {
         }
     }
 
-    func popInTile(coord: Coordinate, completionHandler: ((Bool) -> ())? ) {
+    func popInTile(coord: Coordinate, completionHandler: ((Bool) -> Void)? ) {
         tiles[coord.row][coord.col]!.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
         view_board.bringSubviewToFront(tiles[coord.row][coord.col]!)
         UIView.animate(withDuration: Constants.duration_pop,
@@ -94,12 +94,12 @@ extension ViewController {
                         self.tiles[coord.row][coord.col]!.transform = CGAffineTransform(scaleX: 1, y: 1)
                        }, completion: completionHandler)
     }
-    
+
     func animateTileDrop(coord: Coordinate, drop: Drop) {
         let movingTile = tiles[coord.row][coord.col]!
         let destinationRow = coord.row + drop.rowDrop
         let destinationTile = backTiles[destinationRow][coord.col]!
-        
+
         view_board.bringSubviewToFront(movingTile)
         UIView.animate(withDuration: Constants.duration_drop,
                        delay: 0,
@@ -110,16 +110,17 @@ extension ViewController {
                         movingTile.frame.origin = destinationTile.frame.origin
                        }, completion: nil )
     }
-    
+
     func animateTileMerge(tile: Tile, dest: Coordinate, mergeValue: Int) {
-        Timer.scheduledTimer(withTimeInterval: Constants.delay_pop, repeats: false) { (timer) in
-            self.tiles[dest.row][dest.col]!.setActive(value: mergeValue, colorDefault: Defaults.get(key: Defaults.key_color) as! ColorDefaults)
-            self.popInTile(coord: Coordinate(row: dest.row, col: dest.col), completionHandler: {
-                (completed: Bool) in tile.removeFromSuperview()
+        Timer.scheduledTimer(withTimeInterval: Constants.delay_pop, repeats: false) { _ in
+            self.tiles[dest.row][dest.col]!.setActive(value: mergeValue,
+                colorDefault: Defaults.get(key: Defaults.key_color) as! ColorDefaults)
+            self.popInTile(coord: Coordinate(row: dest.row, col: dest.col), completionHandler: { _ in
+                tile.removeFromSuperview()
             })
         }
     }
-    
+
     func animateShakeUndo() {
         button_undo.transform = CGAffineTransform(translationX: button_undo.frame.width / 4, y: 0)
         UIView.animate(withDuration: 0.4,
@@ -131,16 +132,16 @@ extension ViewController {
                         self.button_undo.transform = CGAffineTransform.identity
                        }, completion: nil)
     }
-    
+
     func addRandomTile(coord: Coordinate, value: Int) {
         tiles[coord.row][coord.col]!.setActive(value: value,
             colorDefault: Defaults.get(key: Defaults.key_color) as! ColorDefaults)
         popInTile(coord: coord, completionHandler: nil)
     }
-    
+
     func updateLabel(currentScore: Int, bestScoreBeat: Bool) {
         let scaleValue = CGFloat(2.25)
-        Timer.scheduledTimer(withTimeInterval: Constants.delay_pop, repeats: false) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: Constants.delay_pop, repeats: false) { _ in
             if bestScoreBeat {
                 UIView.animate(withDuration: Constants.duration_pop, animations: {
                     self.label_scoreValue.transform = CGAffineTransform(scaleX: scaleValue, y: scaleValue)
@@ -164,5 +165,5 @@ extension ViewController {
             }
         }
     }
-    
+
 }

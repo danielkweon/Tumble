@@ -9,21 +9,18 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    //MARK: - User Interface Components
-    
+    // MARK: - User Interface Components
+
     @IBOutlet weak var table_settings: UITableView!
-    
-    
-    //MARK: - Variables
-        
-    
-    //MARK: - Set up
+
+    // MARK: - Variables
+
+    // MARK: - Set up
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         setUpTable()
     }
-    
-}
 
+}

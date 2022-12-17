@@ -10,7 +10,7 @@ import UIKit
 let gridsTableViewCellIdentifier = "GridsTableViewCell"
 
 extension GridsViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func setUpTable() {
         table_grids.backgroundColor = .clear
         table_grids.delegate = self
@@ -19,19 +19,19 @@ extension GridsViewController: UITableViewDelegate, UITableViewDataSource {
         table_grids.register(GridsTableViewCell.nib,
                              forCellReuseIdentifier: gridsTableViewCellIdentifier)
     }
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return table_grids.frame.height / 3.75
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return GridDefaults.allCases.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: gridsTableViewCellIdentifier,
                                                  for: indexPath) as! GridsTableViewCell
@@ -39,5 +39,5 @@ extension GridsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         return cell
     }
-    
+
 }

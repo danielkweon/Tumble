@@ -14,13 +14,13 @@ enum RotationSource: Int {
 
 extension ViewController {
 
-    //MARK: - Gesture Handling
-    
+    // MARK: - Gesture Handling
+
     func addGestures() {
         disableRotationButtons()
         addDragGestures()
     }
-    
+
     func disableRotationSource(source: RotationSource) {
         switch source {
         case .drag:
@@ -29,7 +29,7 @@ extension ViewController {
             disableRotationButtons()
         }
     }
-    
+
     func enableRotationSource(source: RotationSource) {
         switch source {
         case .drag:
@@ -38,7 +38,7 @@ extension ViewController {
             enableRotationButtons()
         }
     }
-    
+
     func disableRotation() {
         disableRotationSource(source:
             Defaults.get(key: Defaults.key_rotationSource) as! RotationSource)
@@ -48,35 +48,33 @@ extension ViewController {
         enableRotationSource(source:
             Defaults.get(key: Defaults.key_rotationSource) as! RotationSource)
     }
-    
-    
-    //MARK: - Buttons
-    
+
+    // MARK: - Buttons
+
     func showRotationButtons() {
         button_rotateCCW.isHidden = false
         button_rotateCW.isHidden = false
     }
-    
+
     func hideRotationButtons() {
         button_rotateCCW.isHidden = true
         button_rotateCW.isHidden = true
     }
-    
+
     func enableRotationButtons() {
         showRotationButtons()
         button_rotateCCW.isEnabled = true
         button_rotateCW.isEnabled = true
     }
-    
+
     func disableRotationButtons() {
         hideRotationButtons()
         button_rotateCCW.isEnabled = false
         button_rotateCW.isEnabled = false
     }
-    
-    
-    //MARK: - Drag Gesture
-    
+
+    // MARK: - Drag Gesture
+
     func addDragGestures() {
         let swipeLeftGesture = UISwipeGestureRecognizer(
             target: self, action: #selector(handleDrag(gesture:)))
@@ -100,7 +98,7 @@ extension ViewController {
         dragGestures.append(swipeDownGesture)
         disableDragGestures()
     }
-    
+
     @objc func handleDrag(gesture: UISwipeGestureRecognizer) {
         let boardCenter = view_board.frame.width / 2.0
         let boardInvalidZone = view_board.frame.width / 10.0
@@ -108,7 +106,7 @@ extension ViewController {
         if (abs(gestureLocation.x - boardCenter) < boardInvalidZone
                 && (gesture.direction == .up || gesture.direction == .down)) ||
             (abs(gestureLocation.y - boardCenter) < boardInvalidZone
-                && (gesture.direction == .left || gesture.direction == .right)){
+                && (gesture.direction == .left || gesture.direction == .right)) {
             return
         }
         switch gesture.direction {
@@ -140,17 +138,17 @@ extension ViewController {
             break
         }
     }
-    
+
     func enableDragGestures() {
         for gestures in dragGestures {
             gestures.isEnabled = true
         }
     }
-    
+
     func disableDragGestures() {
         for gestures in dragGestures {
             gestures.isEnabled = false
         }
     }
-    
+
 }

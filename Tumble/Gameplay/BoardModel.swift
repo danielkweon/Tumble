@@ -17,20 +17,19 @@ struct Drops {
 }
 
 class BoardModel {
-        
+
     var tiles: [[Int]]
     var size: Int
     var grid: GridDefaults
-    
-    var previousTiles: [[Int]]? = nil
+
+    var previousTiles: [[Int]]?
     var waitToMerge: [[Int]] = []
     var emptyTiles: [[Int]] = []
-    
 
     init(newTiles: Bool = false ) {
         grid = Defaults.get(key: Defaults.key_grid) as! GridDefaults
         size = grid.grid.size
-        
+
         tiles = grid.grid.layout
         emptyTiles = grid.grid.layout
 
@@ -45,7 +44,7 @@ class BoardModel {
             _ = addRandomTile()
         }
     }
-    
+
     func clearedTiles(tiles: [[Int]]) -> [[Int]] {
         var clearedTiles: [[Int]] = []
         for row in 0 ..< tiles.count {
@@ -61,23 +60,21 @@ class BoardModel {
         }
         return clearedTiles
     }
-            
-    
-    //MARK: - Board Rotations
-    
+
+    // MARK: - Board Rotations
+
     func rotateCCW() {
         savePreviousState()
         tiles = Util.rotateCCW(grid: tiles) as! [[Int]]
     }
-    
+
     func rotateCW() {
         savePreviousState()
         tiles = Util.rotateCW(grid: tiles) as! [[Int]]
     }
-    
-    
-    //MARK: - Drop Handling
-    
+
+    // MARK: - Drop Handling
+
     func droppable() -> Bool {
         for row in 0 ..< size - 1 {
         for col in 0 ..< size {
@@ -91,7 +88,7 @@ class BoardModel {
         }
         return false
     }
-    
+
     func dropTile(coordinate: Coordinate) -> Drop? {
         let (row, col) = (coordinate.row, coordinate.col)
         if tiles[row][col] == 0 ||
@@ -100,15 +97,14 @@ class BoardModel {
         }
 
         var tilesDropped: Int = 0
-        var willMergeTo: Int? = nil
+        var willMergeTo: Int?
         for i in (row + 1) ..< size {
             if tiles[i][col] == -1 {
                 break
             }
             if tiles[i][col] == 0 {
                 tilesDropped += 1
-            }
-            else {
+            } else {
                 if tiles[i][col] == tiles[row][col] {
                     if waitToMerge[i][col] == 0 {
                         waitToMerge[i][col] = 1
@@ -124,13 +120,13 @@ class BoardModel {
         if tilesDropped == 0 {
             return nil
         }
-        
+
         tiles[row + tilesDropped][col] =
             willMergeTo != nil ? willMergeTo! :tiles[row][col]
         tiles[row][col] = 0
         return Drop(rowDrop: tilesDropped, willMergeTo: willMergeTo)
     }
-    
+
     func dropTiles() -> [Drops] {
         var drops: [Drops] = []
         while droppable() {
@@ -147,32 +143,25 @@ class BoardModel {
             }
             drops.append(Drops(grid: drop.reversed()))
         }
-        print("dropTiles")
-        Util.printBoard(grid: tiles)
         return drops
     }
-    
+
     func addRandomTile() -> (Coordinate, Int) {
         var freeTiles: [Coordinate] = []
         for row in 0 ..< size {
-        for col in 0 ..< size {
-            if tiles[row][col] == 0 {
-                freeTiles.append(Coordinate(row: row, col: col))
-            }
+        for col in 0 ..< size where tiles[row][col] == 0 {
+            freeTiles.append(Coordinate(row: row, col: col))
         }
         }
         let value = Int.random(in: 0...100) < 85 ? 2 : 4
         let coord = freeTiles.randomElement()!
         tiles[coord.row][coord.col] = value
-        
-        print("addRandomTile")
-        Util.printBoard(grid: tiles)
+
         return (coord, value)
     }
 
-    
-    //MARK: - Game State
-    
+    // MARK: - Game State
+
     func undo() -> [[Int]]? {
         if previousTiles != nil {
             tiles = previousTiles!
@@ -193,7 +182,7 @@ class BoardModel {
         }
         return true
     }
-    
+
     func didLose() -> Bool {
         for row in 0 ..< size {
         for col in 0 ..< size {
@@ -205,13 +194,13 @@ class BoardModel {
         }
         return true
     }
-        
+
     func savePreviousState() {
         previousTiles = tiles
     }
-    
+
     func saveState() {
         Defaults.set(key: Defaults.key_board, value: tiles)
     }
-    
+
 }

@@ -12,97 +12,102 @@ protocol SectionType: CustomStringConvertible {
 enum SettingsSection: Int,
                       CaseIterable,
                       CustomStringConvertible {
-    case Appearance
-    case RotationSource
-    case Sound
-    case About
-    
+    case appearance
+    case rotationSource
+    case sound
+    case about
+
     var description: String {
         switch self {
-        case .Appearance:
+        case .appearance:
             return "Appearance"
-        case .RotationSource:
+        case .rotationSource:
             return "Rotation Source"
-        case .Sound:
+        case .sound:
             return "Sound"
-        case .About:
+        case .about:
             return "About"
         }
     }
+
 }
 
 enum AppearanceOptions: Int,
                         CaseIterable,
                         SectionType {
-    case DarkMode
-    case Automatic
-    
+    case darkMode
+    case automatic
+
     var containsSwitch: Bool {
         switch self {
-        case .DarkMode:
+        case .darkMode:
             return true
-        case .Automatic:
+        case .automatic:
             return true
         }
     }
-    
+
     var description: String {
         switch self {
-        case .DarkMode:
+        case .darkMode:
             return "Dark Mode"
-        case .Automatic:
+        case .automatic:
             return "Automatic Mode"
         }
     }
+
 }
 
 enum RotationSourceOptions: Int,
                         CaseIterable,
                         SectionType {
-    case Swipe
-    case Button
-    
+    case swipe
+    case button
+
     var containsSwitch: Bool { return true }
-    
+
     var description: String {
         switch self {
-        case .Swipe:
+        case .swipe:
             return "Swipe"
-        case .Button:
+        case .button:
             return "Button"
         }
     }
+
 }
 
 enum SoundOptions: Int,
                         CaseIterable,
                         SectionType {
-    case Sound
-    
+    case sound
+
     var containsSwitch: Bool { return true }
-    
+
     var description: String {
         switch self {
-        case .Sound:
+        case .sound:
             return "Sound"
         }
     }
+
 }
 
 enum AboutOptions: Int,
                         CaseIterable,
                         SectionType {
-    case Tutorial
-    case Privacy
-    
+    case tutorial
+    case privacy
+
     var containsSwitch: Bool { return false }
-    
+
     var description: String {
         switch self {
-        case .Tutorial:
+        case .tutorial:
             return "Tutorial"
-        case .Privacy:
+        case .privacy:
             return "Privacy"
         }
     }
+
 }

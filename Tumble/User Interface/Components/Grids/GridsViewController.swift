@@ -9,26 +9,24 @@ import UIKit
 
 class GridsViewController: UIViewController {
 
-    //MARK: - User Interface Components
-    
-    @IBOutlet weak var table_grids: UITableView!
-    
-    
-    //MARK: - Variables
-    
-    var completionHandler  : (() -> Void) = {}
+    // MARK: - User Interface Components
 
-    
-    //MARK: - Set up
+    @IBOutlet weak var table_grids: UITableView!
+
+    // MARK: - Variables
+
+    var completionHandler: (() -> Void) = {}
+
+    // MARK: - Set up
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setUpTable()
     }
-    
+
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
     }
-    
+
 }

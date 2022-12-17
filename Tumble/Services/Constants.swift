@@ -7,7 +7,7 @@
 
 class Constants {
 
-    //MARK: - Animation Durations
+    // MARK: - Animation Durations
 
     static let duration_rotation        = 0.25
     static let duration_drop            = 0.25

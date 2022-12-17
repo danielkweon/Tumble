@@ -8,9 +8,9 @@
 import UIKit
 
 class SettingsCell: UITableViewCell {
-    
+
     // MARK: - Properties
-    
+
     lazy var switchControl: UISwitch = {
         let switchControl = UISwitch()
         switchControl.isOn = false
@@ -19,7 +19,7 @@ class SettingsCell: UITableViewCell {
         switchControl.addTarget(self, action: #selector(handleSwitch), for: .valueChanged)
         return switchControl
     }()
-    
+
     var sectionType: SectionType? {
         didSet {
             guard let sectionType = sectionType else {return}
@@ -28,9 +28,9 @@ class SettingsCell: UITableViewCell {
             switchControl.isHidden = !sectionType.containsSwitch
         }
     }
-    
+
     // MARK: - Init
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: settingsCellIdentifier)
         backgroundColor = .clear
@@ -39,11 +39,11 @@ class SettingsCell: UITableViewCell {
         switchControl.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         switchControl.rightAnchor.constraint(equalTo: rightAnchor, constant: -12).isActive = true
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     @objc func handleSwitch(_ sender: UISwitch) {
         if sender.isOn {
             print("is On")
@@ -51,5 +51,5 @@ class SettingsCell: UITableViewCell {
             print("is Off")
         }
     }
-    
+
 }
