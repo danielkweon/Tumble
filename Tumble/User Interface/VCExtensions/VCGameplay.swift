@@ -18,11 +18,13 @@ extension ViewController {
         
         
         //MARK: - Start Gameplay
-        
+        gameService.delegate = self
+        gameService.setUpBoard()
         enableUserInteraction()
     }
     
     func stopGameplay() {
+        gameService.saveState()
     }
     
     func enableUserInteraction() {
@@ -37,10 +39,16 @@ extension ViewController {
     
     func handleCWRotation() {
         disableUserInteraction()
+        tiles = Util.rotateCW(grid: tiles) as! [[Tile?]]
+        backTiles = Util.rotateCW(grid: backTiles) as! [[BackTile?]]
+        gameService.handleCWRotation()
     }
     
     func handleCCWRotation() {
         disableUserInteraction()
+        tiles = Util.rotateCCW(grid: tiles) as! [[Tile?]]
+        backTiles = Util.rotateCCW(grid: backTiles) as! [[BackTile?]]
+        gameService.handleCCWRotation()
     }
     
 }

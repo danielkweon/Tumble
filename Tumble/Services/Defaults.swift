@@ -21,7 +21,6 @@ class Defaults {
                                                    "grid6"  : 0,
                                                    "grid7"  : 0]
 
-    static let default_grid                     = "grid0"
     static let default_unlockedGrids            = ["grid0"]
     static let default_unlockedColors           = ["Blue"]
     
@@ -67,7 +66,7 @@ class Defaults {
             case key_unlockedGrids:
                 set(key: key, value: default_unlockedGrids)
             case key_grid:
-                set(key: key, value: default_grid)
+                set(key: key, value: GridDefaults.grid0.rawValue)
             default:
                 break
             }
@@ -75,6 +74,9 @@ class Defaults {
         switch key {
         case key_color:
             return ColorDefaults(
+                rawValue: UserDefaults.standard.object(forKey: key) as! Int)
+        case key_grid:
+            return GridDefaults(
                 rawValue: UserDefaults.standard.object(forKey: key) as! Int)
         case key_rotationSource:
             set(key: key, value: RotationSource.drag.rawValue)

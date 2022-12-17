@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A63A0D7A294CFCAF0050C674 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63A0D79294CFCAF0050C674 /* Tile.swift */; };
+		A63A0D7C294CFFA30050C674 /* GameService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63A0D7B294CFFA30050C674 /* GameService.swift */; };
+		A63A0D7E294CFFAD0050C674 /* VCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63A0D7D294CFFAD0050C674 /* VCDelegate.swift */; };
+		A63A0D80294D076F0050C674 /* VCSegues.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63A0D7F294D076F0050C674 /* VCSegues.swift */; };
+		A63A0D82294D07AD0050C674 /* VCEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A63A0D81294D07AD0050C674 /* VCEffects.swift */; };
 		A665346A2946FFB4005AF40A /* VCGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66534692946FFB4005AF40A /* VCGestures.swift */; };
 		A665346C29470072005AF40A /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665346B29470072005AF40A /* Util.swift */; };
 		A665346E2947A579005AF40A /* VCGameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A665346D2947A579005AF40A /* VCGameplay.swift */; };
@@ -34,13 +39,18 @@
 		A6EFA2C0294BA4C2003CC7CA /* ColorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2BE294BA4C2003CC7CA /* ColorsTableViewCell.swift */; };
 		A6EFA2C1294BA4C2003CC7CA /* ColorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2BF294BA4C2003CC7CA /* ColorsTableViewCell.xib */; };
 		A6EFA2C3294BA4FB003CC7CA /* Colors.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2C2294BA4FB003CC7CA /* Colors.storyboard */; };
-		A6EFA2C6294BA65F003CC7CA /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2C5294BA65F003CC7CA /* Tile.swift */; };
+		A6EFA2C6294BA65F003CC7CA /* BackTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2C5294BA65F003CC7CA /* BackTile.swift */; };
 		A6EFA2C8294BC732003CC7CA /* SettingsEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2C7294BC732003CC7CA /* SettingsEnums.swift */; };
 		A6EFA2CA294BC852003CC7CA /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2C9294BC852003CC7CA /* Settings.storyboard */; };
 		A6EFA2CC294BC87C003CC7CA /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2CB294BC87C003CC7CA /* SettingsViewController.swift */; };
 		A6EFA2CE294BC881003CC7CA /* SettingsTableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2CD294BC881003CC7CA /* SettingsTableExtension.swift */; };
 		A6EFA2D0294BC887003CC7CA /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2CF294BC887003CC7CA /* SettingsCell.swift */; };
 		A6EFA2D2294C10DD003CC7CA /* BoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2D1294C10DD003CC7CA /* BoardModel.swift */; };
+		A6EFA2D6294CF0D9003CC7CA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2D5294CF0D9003CC7CA /* Constants.swift */; };
+		A6EFA2DA294CF7A3003CC7CA /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2D8294CF7A3003CC7CA /* GameOverViewController.swift */; };
+		A6EFA2DB294CF7A3003CC7CA /* GameOver.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2D9294CF7A3003CC7CA /* GameOver.storyboard */; };
+		A6EFA2DF294CF7AA003CC7CA /* Confirmation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6EFA2DD294CF7AA003CC7CA /* Confirmation.storyboard */; };
+		A6EFA2E0294CF7AA003CC7CA /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6EFA2DE294CF7AA003CC7CA /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A63A0D79294CFCAF0050C674 /* Tile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		A63A0D7B294CFFA30050C674 /* GameService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameService.swift; sourceTree = "<group>"; };
+		A63A0D7D294CFFAD0050C674 /* VCDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDelegate.swift; sourceTree = "<group>"; };
+		A63A0D7F294D076F0050C674 /* VCSegues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCSegues.swift; sourceTree = "<group>"; };
+		A63A0D81294D07AD0050C674 /* VCEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCEffects.swift; sourceTree = "<group>"; };
 		A66534692946FFB4005AF40A /* VCGestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCGestures.swift; sourceTree = "<group>"; };
 		A665346B29470072005AF40A /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		A665346D2947A579005AF40A /* VCGameplay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCGameplay.swift; sourceTree = "<group>"; };
@@ -92,13 +107,18 @@
 		A6EFA2BE294BA4C2003CC7CA /* ColorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewCell.swift; sourceTree = "<group>"; };
 		A6EFA2BF294BA4C2003CC7CA /* ColorsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorsTableViewCell.xib; sourceTree = "<group>"; };
 		A6EFA2C2294BA4FB003CC7CA /* Colors.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Colors.storyboard; sourceTree = "<group>"; };
-		A6EFA2C5294BA65F003CC7CA /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		A6EFA2C5294BA65F003CC7CA /* BackTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackTile.swift; sourceTree = "<group>"; };
 		A6EFA2C7294BC732003CC7CA /* SettingsEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsEnums.swift; sourceTree = "<group>"; };
 		A6EFA2C9294BC852003CC7CA /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		A6EFA2CB294BC87C003CC7CA /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A6EFA2CD294BC881003CC7CA /* SettingsTableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableExtension.swift; sourceTree = "<group>"; };
 		A6EFA2CF294BC887003CC7CA /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		A6EFA2D1294C10DD003CC7CA /* BoardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardModel.swift; sourceTree = "<group>"; };
+		A6EFA2D5294CF0D9003CC7CA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A6EFA2D8294CF7A3003CC7CA /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		A6EFA2D9294CF7A3003CC7CA /* GameOver.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameOver.storyboard; sourceTree = "<group>"; };
+		A6EFA2DD294CF7AA003CC7CA /* Confirmation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Confirmation.storyboard; sourceTree = "<group>"; };
+		A6EFA2DE294CF7AA003CC7CA /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +153,9 @@
 				A665346D2947A579005AF40A /* VCGameplay.swift */,
 				A66534692946FFB4005AF40A /* VCGestures.swift */,
 				A66534752947ABCD005AF40A /* VCVisuals.swift */,
+				A63A0D7D294CFFAD0050C674 /* VCDelegate.swift */,
+				A63A0D7F294D076F0050C674 /* VCSegues.swift */,
+				A63A0D81294D07AD0050C674 /* VCEffects.swift */,
 			);
 			path = VCExtensions;
 			sourceTree = "<group>";
@@ -230,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				A6EFA2D1294C10DD003CC7CA /* BoardModel.swift */,
+				A63A0D7B294CFFA30050C674 /* GameService.swift */,
 			);
 			path = Gameplay;
 			sourceTree = "<group>";
@@ -240,6 +264,7 @@
 				A66534712947A6E0005AF40A /* Colors.swift */,
 				A6EA62F32947DADE007CA1CB /* Grids.swift */,
 				A665346F2947A5F8005AF40A /* Defaults.swift */,
+				A6EFA2D5294CF0D9003CC7CA /* Constants.swift */,
 				A665346B29470072005AF40A /* Util.swift */,
 			);
 			path = Services;
@@ -259,6 +284,8 @@
 			isa = PBXGroup;
 			children = (
 				A6EFA2C4294BA616003CC7CA /* Accessories */,
+				A6EFA2DC294CF7AA003CC7CA /* Confirmation */,
+				A6EFA2D7294CF7A3003CC7CA /* GameOver */,
 				A66534892947D861005AF40A /* Grids */,
 				A66534792947D857005AF40A /* Colors */,
 				A66534882947D85C005AF40A /* Settings */,
@@ -269,9 +296,28 @@
 		A6EFA2C4294BA616003CC7CA /* Accessories */ = {
 			isa = PBXGroup;
 			children = (
-				A6EFA2C5294BA65F003CC7CA /* Tile.swift */,
+				A6EFA2C5294BA65F003CC7CA /* BackTile.swift */,
+				A63A0D79294CFCAF0050C674 /* Tile.swift */,
 			);
 			path = Accessories;
+			sourceTree = "<group>";
+		};
+		A6EFA2D7294CF7A3003CC7CA /* GameOver */ = {
+			isa = PBXGroup;
+			children = (
+				A6EFA2D8294CF7A3003CC7CA /* GameOverViewController.swift */,
+				A6EFA2D9294CF7A3003CC7CA /* GameOver.storyboard */,
+			);
+			path = GameOver;
+			sourceTree = "<group>";
+		};
+		A6EFA2DC294CF7AA003CC7CA /* Confirmation */ = {
+			isa = PBXGroup;
+			children = (
+				A6EFA2DD294CF7AA003CC7CA /* Confirmation.storyboard */,
+				A6EFA2DE294CF7AA003CC7CA /* ConfirmationViewController.swift */,
+			);
+			path = Confirmation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,6 +424,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6EFA2DB294CF7A3003CC7CA /* GameOver.storyboard in Resources */,
+				A6EFA2DF294CF7AA003CC7CA /* Confirmation.storyboard in Resources */,
 				A69C6B2829452CA5008F87E1 /* LaunchScreen.storyboard in Resources */,
 				A6EFA2C1294BA4C2003CC7CA /* ColorsTableViewCell.xib in Resources */,
 				A6EFA2C3294BA4FB003CC7CA /* Colors.storyboard in Resources */,
@@ -419,10 +467,16 @@
 				A6EFA2CE294BC881003CC7CA /* SettingsTableExtension.swift in Sources */,
 				A66534762947ABCD005AF40A /* VCVisuals.swift in Sources */,
 				A665346E2947A579005AF40A /* VCGameplay.swift in Sources */,
+				A6EFA2DA294CF7A3003CC7CA /* GameOverViewController.swift in Sources */,
+				A63A0D80294D076F0050C674 /* VCSegues.swift in Sources */,
 				A6EFA2C0294BA4C2003CC7CA /* ColorsTableViewCell.swift in Sources */,
+				A63A0D7E294CFFAD0050C674 /* VCDelegate.swift in Sources */,
 				A6EFA2D0294BC887003CC7CA /* SettingsCell.swift in Sources */,
+				A63A0D82294D07AD0050C674 /* VCEffects.swift in Sources */,
 				A665346C29470072005AF40A /* Util.swift in Sources */,
 				A6EFA2C8294BC732003CC7CA /* SettingsEnums.swift in Sources */,
+				A63A0D7A294CFCAF0050C674 /* Tile.swift in Sources */,
+				A63A0D7C294CFFA30050C674 /* GameService.swift in Sources */,
 				A6EA62F42947DADE007CA1CB /* Grids.swift in Sources */,
 				A6EFA2D2294C10DD003CC7CA /* BoardModel.swift in Sources */,
 				A66534722947A6E0005AF40A /* Colors.swift in Sources */,
@@ -430,9 +484,11 @@
 				A665346A2946FFB4005AF40A /* VCGestures.swift in Sources */,
 				A6EFA2BD294BA478003CC7CA /* ColorsTableExtension.swift in Sources */,
 				A69C6B1E29452CA3008F87E1 /* SceneDelegate.swift in Sources */,
-				A6EFA2C6294BA65F003CC7CA /* Tile.swift in Sources */,
+				A6EFA2C6294BA65F003CC7CA /* BackTile.swift in Sources */,
 				A6EFA2AD2947EA46003CC7CA /* GridsViewController.swift in Sources */,
 				A6EFA2B5294A4883003CC7CA /* GridsTableViewCell.swift in Sources */,
+				A6EFA2E0294CF7AA003CC7CA /* ConfirmationViewController.swift in Sources */,
+				A6EFA2D6294CF0D9003CC7CA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

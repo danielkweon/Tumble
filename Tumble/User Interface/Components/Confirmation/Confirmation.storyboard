@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Confirmation View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="ConfirmationViewController" customModule="Tumble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bR9-Vi-Yfw" userLabel="Game Area View">
+                                <rect key="frame" x="0.0" y="34" width="390" height="776"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bR9-Vi-Yfw" secondAttribute="height" multiplier="1:2" id="ekP-Mk-myx"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ekP-Mk-myx"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="ekP-Mk-myx"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKh-iP-7jN" userLabel="View Button">
+                                <rect key="frame" x="0.0" y="10" width="1024" height="1346"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gxi-IP-ANt"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xjw-4K-Na3" userLabel="Confirmation View">
+                                <rect key="frame" x="8" y="549.66666666666663" width="374" height="252.33333333333337"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qaL-05-9dP" userLabel="Confirmation Label View">
+                                        <rect key="frame" x="8" y="23.666666666666735" width="358" height="113.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmation Label Confirmation Label  Confirmation Label Confirmation Label Confirmation Label Confirmation Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIp-Hw-cO0" userLabel="Confirmation Label">
+                                                <rect key="frame" x="8" y="8" width="342" height="97.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="heightClass=regular-widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="lIp-Hw-cO0" firstAttribute="top" secondItem="qaL-05-9dP" secondAttribute="top" constant="8" id="LeL-cq-d3O"/>
+                                            <constraint firstItem="lIp-Hw-cO0" firstAttribute="trailing" secondItem="qaL-05-9dP" secondAttribute="trailing" constant="-8" id="mYj-ok-Ub3"/>
+                                            <constraint firstItem="lIp-Hw-cO0" firstAttribute="bottom" secondItem="qaL-05-9dP" secondAttribute="bottom" constant="-8" id="wXs-ZO-Q9Z"/>
+                                            <constraint firstItem="lIp-Hw-cO0" firstAttribute="leading" secondItem="qaL-05-9dP" secondAttribute="leading" constant="8" id="waO-46-9hR"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5CX-bc-1no" userLabel="Buttons View">
+                                        <rect key="frame" x="8" y="137" width="358" height="107.33333333333331"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="q4J-Ol-CrG" userLabel="Button Stack View">
+                                                <rect key="frame" x="31" y="33.333333333333371" width="296" height="41"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="047-LF-i7y" userLabel="Cancel Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="123" height="41"/>
+                                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="047-LF-i7y" secondAttribute="height" multiplier="3:1" id="8x7-0Y-QGc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <state key="normal" title="Cancel">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="cancelButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bML-1I-Fvc"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmg-WD-ckZ" userLabel="Confirm Button">
+                                                        <rect key="frame" x="173" y="0.0" width="123" height="41"/>
+                                                        <color key="backgroundColor" red="0.72182531080000001" green="0.88917103509999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="cmg-WD-ckZ" secondAttribute="height" multiplier="3:1" id="ILv-ui-MDa"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                        <state key="normal" title="Confirm">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <variation key="heightClass=regular-widthClass=regular">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                        </variation>
+                                                        <connections>
+                                                            <action selector="confirmButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1x3-Ra-ysT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <variation key="heightClass=regular-widthClass=regular" spacing="100"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="q4J-Ol-CrG" firstAttribute="centerX" secondItem="5CX-bc-1no" secondAttribute="centerX" id="aTL-e3-zgp"/>
+                                            <constraint firstItem="q4J-Ol-CrG" firstAttribute="centerY" secondItem="5CX-bc-1no" secondAttribute="centerY" id="mbS-JS-yAJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.80370299049190708" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="qaL-05-9dP" firstAttribute="width" secondItem="Xjw-4K-Na3" secondAttribute="width" multiplier="0.85" id="1gK-KC-m0a"/>
+                                    <constraint firstItem="5CX-bc-1no" firstAttribute="trailing" secondItem="Xjw-4K-Na3" secondAttribute="trailing" constant="-8" id="2UB-Kc-3Ya"/>
+                                    <constraint firstItem="qaL-05-9dP" firstAttribute="height" secondItem="Xjw-4K-Na3" secondAttribute="height" multiplier="0.45" id="9ma-8A-iPh"/>
+                                    <constraint firstItem="5CX-bc-1no" firstAttribute="height" secondItem="Xjw-4K-Na3" secondAttribute="height" multiplier="0.425" id="QBB-qx-tZi"/>
+                                    <constraint firstItem="5CX-bc-1no" firstAttribute="leading" secondItem="Xjw-4K-Na3" secondAttribute="leading" constant="8" id="Qg2-2W-Ixl"/>
+                                    <constraint firstItem="qaL-05-9dP" firstAttribute="bottom" secondItem="5CX-bc-1no" secondAttribute="top" id="RVs-0Q-dcX"/>
+                                    <constraint firstItem="qaL-05-9dP" firstAttribute="leading" secondItem="Xjw-4K-Na3" secondAttribute="leading" constant="8" id="a9A-r1-cg1"/>
+                                    <constraint firstItem="5CX-bc-1no" firstAttribute="height" secondItem="Xjw-4K-Na3" secondAttribute="height" multiplier="0.35" id="boJ-8J-RnD"/>
+                                    <constraint firstItem="qaL-05-9dP" firstAttribute="trailing" secondItem="Xjw-4K-Na3" secondAttribute="trailing" constant="-8" id="jqG-hN-Tna"/>
+                                    <constraint firstItem="qaL-05-9dP" firstAttribute="centerX" secondItem="Xjw-4K-Na3" secondAttribute="centerX" id="nJY-G5-aRc"/>
+                                    <constraint firstItem="5CX-bc-1no" firstAttribute="bottom" secondItem="Xjw-4K-Na3" secondAttribute="bottom" constant="-8" id="tLE-xk-yRC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="QBB-qx-tZi"/>
+                                        <exclude reference="boJ-8J-RnD"/>
+                                        <exclude reference="1gK-KC-m0a"/>
+                                        <exclude reference="a9A-r1-cg1"/>
+                                        <exclude reference="jqG-hN-Tna"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="QBB-qx-tZi"/>
+                                        <include reference="a9A-r1-cg1"/>
+                                        <include reference="jqG-hN-Tna"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="boJ-8J-RnD"/>
+                                        <include reference="1gK-KC-m0a"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xjw-4K-Na3" firstAttribute="height" secondItem="bR9-Vi-Yfw" secondAttribute="height" multiplier="0.235" id="FXR-7j-Ygh"/>
+                            <constraint firstItem="bR9-Vi-Yfw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="QD4-Ur-r5q"/>
+                            <constraint firstItem="bR9-Vi-Yfw" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="QmZ-1D-q0P"/>
+                            <constraint firstItem="Xjw-4K-Na3" firstAttribute="centerX" secondItem="bR9-Vi-Yfw" secondAttribute="centerX" id="WTd-ic-t54"/>
+                            <constraint firstItem="bR9-Vi-Yfw" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="d5L-Hp-PJT"/>
+                            <constraint firstItem="bR9-Vi-Yfw" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="eLh-Oy-BpF"/>
+                            <constraint firstItem="Xjw-4K-Na3" firstAttribute="bottom" secondItem="bR9-Vi-Yfw" secondAttribute="bottom" constant="-8" id="mzj-Jl-MpF"/>
+                            <constraint firstItem="Xjw-4K-Na3" firstAttribute="height" secondItem="bR9-Vi-Yfw" secondAttribute="height" multiplier="0.325" id="qLv-d4-kNa"/>
+                            <constraint firstItem="Xjw-4K-Na3" firstAttribute="leading" secondItem="bR9-Vi-Yfw" secondAttribute="leading" constant="8" id="waS-gW-CJn"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="QD4-Ur-r5q"/>
+                                <exclude reference="FXR-7j-Ygh"/>
+                                <exclude reference="qLv-d4-kNa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="QD4-Ur-r5q"/>
+                                <include reference="qLv-d4-kNa"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="FXR-7j-Ygh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="button_cancel" destination="047-LF-i7y" id="HR4-UM-4Y6"/>
+                        <outlet property="button_confirm" destination="cmg-WD-ckZ" id="pPU-xS-K4j"/>
+                        <outlet property="label_confirmation" destination="lIp-Hw-cO0" id="Cj7-ya-iqR"/>
+                        <outlet property="view_confirmation" destination="Xjw-4K-Na3" id="Fu0-oq-IHF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.615384615384613" y="88.151658767772503"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

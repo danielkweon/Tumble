@@ -22,7 +22,7 @@ class ColorsTableViewCell: UITableViewCell {
     
     var delegate: ColorsViewController?
 
-    var tiles               : [[Tile]] = []
+    var tiles               : [[BackTile]] = []
     var tileValues          : [Int] = [2, 4, 8, 16]
     var color: ColorDefaults? {
         didSet {
@@ -63,7 +63,7 @@ class ColorsTableViewCell: UITableViewCell {
         var tileIndex = 0
         let size = 2, tileSpacing = view_board.frame.width / 42.0
         for row in 0 ..< size {
-            var tileRow: [Tile] = []
+            var tileRow: [BackTile] = []
             for col in 0 ..< size {
                 let tileSize = (view_board.frame.width
                                 - ((CGFloat(size) + 1.0) * tileSpacing)) / CGFloat(size)
@@ -71,7 +71,7 @@ class ColorsTableViewCell: UITableViewCell {
                                         * (tileSize + tileSpacing),
                                      y: tileSpacing + CGFloat(row)
                                         * (tileSize + tileSpacing))
-                let tile = Tile(frame: CGRect(origin: origin,
+                let tile = BackTile(frame: CGRect(origin: origin,
                                               size: CGSize(width: tileSize, height: tileSize)))
                 let (_, backgroundColor) = Colors.colorFor(value: tileValues[tileIndex],
                                                             colorDefault: color!)

@@ -63,7 +63,7 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" weight="medium"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="UVe-kl-iEY" kind="show" id="YnR-CV-TjS"/>
+                                                            <segue destination="UVe-kl-iEY" kind="show" identifier="segue_Colors" id="YnR-CV-TjS"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -88,7 +88,7 @@
                                                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="50" weight="medium"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="nOg-Ah-CzN" kind="show" id="enW-y7-mbN"/>
+                                                            <segue destination="nOg-Ah-CzN" kind="show" identifier="segue_Settings" id="enW-y7-mbN"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -487,11 +487,13 @@
                         <outlet property="label_tumble" destination="w2o-rn-gaH" id="ZHP-eL-0zi"/>
                         <outlet property="view_board" destination="v95-UU-sf3" id="a5p-7G-peE"/>
                         <outlet property="view_gesture" destination="p66-Wn-cYZ" id="rBH-Mf-7VD"/>
+                        <segue destination="kwk-cW-Lct" kind="presentation" identifier="segue_GameOver" id="7ow-jl-Q08"/>
+                        <segue destination="gvl-Ds-TqU" kind="presentation" identifier="segue_Confirmation" id="t3E-Vq-HCI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063" y="-51"/>
+            <point key="canvasLocation" x="1087" y="-52"/>
         </scene>
         <!--Grids-->
         <scene sceneID="Pi1-IG-jHa">
@@ -522,6 +524,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xhu-gY-rfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1762" y="-249"/>
+        </scene>
+        <!--GameOver-->
+        <scene sceneID="jIK-kV-Cf4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GameOver" id="kwk-cW-Lct" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHH-Cu-8H2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="-142"/>
+        </scene>
+        <!--Confirmation-->
+        <scene sceneID="TyZ-v4-1JX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Confirmation" id="gvl-Ds-TqU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IPf-SS-Zvd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1787" y="-90"/>
         </scene>
     </scenes>
     <resources>

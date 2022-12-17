@@ -72,16 +72,16 @@ class Colors {
             (bRGB, lRGB) = index < redColors.count ?
                 redColors[index] : (RGB(R: 255, G: 0, B: 0), whiteRGB)
         case .green:
-            (bRGB, lRGB) = index < blueColors.count ?
+            (bRGB, lRGB) = index < greenColors.count ?
                 greenColors[index] : (RGB(R: 0, G: 255, B: 0), whiteRGB)
         case .yellow:
-            (bRGB, lRGB) = index < redColors.count ?
+            (bRGB, lRGB) = index < yellowColors.count ?
                 yellowColors[index] : (RGB(R: 255, G: 255, B: 0), whiteRGB)
         case .pink:
-            (bRGB, lRGB) = index < blueColors.count ?
+            (bRGB, lRGB) = index < pinkColors.count ?
                 pinkColors[index] : (RGB(R: 255, G: 192, B: 203), whiteRGB)
         case .purple:
-            (bRGB, lRGB) = index < redColors.count ?
+            (bRGB, lRGB) = index < purpleColors.count ?
                 purpleColors[index] : (RGB(R: 147, G: 112, B: 219), whiteRGB)
         }
         let backColor = UIColor(displayP3Red:   CGFloat(bRGB.R)/255,

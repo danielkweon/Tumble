@@ -50,14 +50,17 @@ extension ViewController {
     @IBAction func undoButtonPressed(_ sender: UIButton) {
         if buttonsEnabled {
             disableUserInteraction()
-            // Handle Undo
+            gameService.undo()
+            Timer.scheduledTimer(withTimeInterval: 0.25, repeats: false) { timer in
+                self.enableUserInteraction()
+            }
         }
     }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         if buttonsEnabled {
             disableUserInteraction()
-            // Handle Clear
+            handleClear()
         }
     }
     

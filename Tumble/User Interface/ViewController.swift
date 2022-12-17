@@ -34,6 +34,9 @@ class ViewController: UIViewController {
     
     var swipeGestures   : [UISwipeGestureRecognizer] = []
     var dragGestures    : [UISwipeGestureRecognizer] = []
+    var gameService     : GameService = GameService()
+    var backTiles       : [[BackTile?]] = []
+    var tiles           : [[Tile?]] = []
     var buttonsEnabled  : Bool = false
     
     

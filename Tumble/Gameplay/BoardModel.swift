@@ -28,20 +28,40 @@ class BoardModel {
     
 
     init(newTiles: Bool = false ) {
-        tiles = Defaults.get(key: Defaults.key_board) as! [[Int]]
         grid = Defaults.get(key: Defaults.key_grid) as! GridDefaults
-
         size = grid.grid.size
-        emptyTiles = grid.grid.layout
         
-        if didLose() {
-            tiles = emptyTiles;
-        }
+        tiles = grid.grid.layout
+        emptyTiles = grid.grid.layout
+
+//        tiles = newTiles ? emptyTiles :
+//            Defaults.get(key: Defaults.key_board) as! [[Int]]
+//        emptyTiles = clearedTiles(tiles: tiles)
+//
+//        if size != tiles.count || didLose() {
+//            tiles = emptyTiles;
+//        }
         if isEmpty() {
             _ = addRandomTile()
         }
     }
-
+    
+    func clearedTiles(tiles: [[Int]]) -> [[Int]] {
+        var clearedTiles: [[Int]] = []
+        for row in 0 ..< tiles.count {
+            var clearedRow: [Int] = []
+            for col in 0 ..< tiles[row].count {
+                if tiles[row][col] == -1 {
+                    clearedRow.append(tiles[row][col])
+                } else {
+                    clearedRow.append(0)
+                }
+            }
+            clearedTiles.append(clearedRow)
+        }
+        return clearedTiles
+    }
+            
     
     //MARK: - Board Rotations
     
@@ -114,7 +134,8 @@ class BoardModel {
     func dropTiles() -> [Drops] {
         var drops: [Drops] = []
         while droppable() {
-            waitToMerge = emptyTiles
+            waitToMerge = [[Int]](repeating: [Int](repeating: 0, count: size),
+                                  count: size)
             var drop: [[Drop?]] = []
             for row in (0 ..< size).reversed() {
                 var dropRow: [Drop?] = []
@@ -126,6 +147,8 @@ class BoardModel {
             }
             drops.append(Drops(grid: drop.reversed()))
         }
+        print("dropTiles")
+        Util.printBoard(grid: tiles)
         return drops
     }
     
@@ -141,6 +164,9 @@ class BoardModel {
         let value = Int.random(in: 0...100) < 85 ? 2 : 4
         let coord = freeTiles.randomElement()!
         tiles[coord.row][coord.col] = value
+        
+        print("addRandomTile")
+        Util.printBoard(grid: tiles)
         return (coord, value)
     }
 
@@ -159,7 +185,8 @@ class BoardModel {
     func isEmpty() -> Bool {
         for row in 0 ..< size {
         for col in 0 ..< size {
-            if tiles[row][col] != 0 {
+            if tiles[row][col] != 0 &&
+                tiles[row][col] != -1 {
                 return false
             }
         }

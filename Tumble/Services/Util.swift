@@ -14,11 +14,11 @@ struct Coordinate {
 
 class Util {
 
-    static func rotateCW(grid: [[Any]]) -> [[Any]] {
-        var rotatedGrid: [[Any]] = []
+    static func rotateCW(grid: [[Any?]]) -> [[Any?]] {
+        var rotatedGrid: [[Any?]] = []
         let gridSize = grid.count - 1
         for col in 0 ... gridSize {
-            var newRow: [Any] = []
+            var newRow: [Any?] = []
             for row in (0 ... gridSize).reversed() {
                 newRow.append(grid[row][col])
             }
@@ -27,11 +27,11 @@ class Util {
         return rotatedGrid
     }
     
-    static func rotateCCW(grid: [[Any]]) -> [[Any]] {
-        var rotatedGrid: [[Any]] = []
+    static func rotateCCW(grid: [[Any?]]) -> [[Any?]] {
+        var rotatedGrid: [[Any?]] = []
         let gridSize = grid.count - 1
         for col in (0 ... gridSize).reversed() {
-            var newRow: [Any] = []
+            var newRow: [Any?] = []
             for row in 0 ... gridSize {
                 newRow.append(grid[row][col])
             }

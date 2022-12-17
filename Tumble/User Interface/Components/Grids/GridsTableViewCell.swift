@@ -22,7 +22,7 @@ class GridsTableViewCell: UITableViewCell {
     
     var delegate: GridsViewController?
 
-    var tiles               : [[Tile]] = []
+    var tiles               : [[BackTile]] = []
     var grid: GridDefaults? {
         didSet {
             view_board.layer.cornerRadius = view_board.frame.width / 30.0
@@ -62,7 +62,7 @@ class GridsTableViewCell: UITableViewCell {
         let size = grid!.grid.size, layout = grid!.grid.layout
         let tileSpacing = view_board.frame.width / 42.0
         for row in 0 ..< size {
-            var tileRow: [Tile] = []
+            var tileRow: [BackTile] = []
             for col in 0 ..< size {
                 if layout[row][col] == -1 {
                     continue
@@ -74,7 +74,7 @@ class GridsTableViewCell: UITableViewCell {
                                         * (tileSize + tileSpacing),
                                      y: tileSpacing + CGFloat(row)
                                         * (tileSize + tileSpacing))
-                let tile = Tile(frame: CGRect(origin: origin,
+                let tile = BackTile(frame: CGRect(origin: origin,
                                               size: CGSize(width: tileSize, height: tileSize)))
                 view_board.addSubview(tile)
                 tileRow.append(tile)
@@ -84,7 +84,7 @@ class GridsTableViewCell: UITableViewCell {
     }
     
     func setButtonText() {
-        if Defaults.get(key: Defaults.key_grid) as! String == grid!.description {
+        if (Defaults.get(key: Defaults.key_grid) as! GridDefaults).description == grid!.description {
             button_unlock.isHidden   = true
             button_select.isHidden   = true
             button_selected.isHidden = false
@@ -104,13 +104,13 @@ class GridsTableViewCell: UITableViewCell {
         Defaults.set(key: Defaults.key_unlockedGrids, value: unlockedGrids)
         
         self.delegate?.table_grids.reloadData()
-        //TODO
     }
     
     @IBAction func selectButtonPressed(_ sender: Any) {
-        Defaults.set(key: Defaults.key_grid, value: grid!.description)
+        Defaults.set(key: Defaults.key_grid, value: grid!.rawValue)
 
         self.delegate?.table_grids.reloadData()
+        delegate?.completionHandler()
     }
     
 }

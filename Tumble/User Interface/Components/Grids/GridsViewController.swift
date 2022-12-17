@@ -29,7 +29,6 @@ class GridsViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        completionHandler()
     }
     
 }
